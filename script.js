@@ -8,7 +8,8 @@ function draw() {
     console.log('draw');
 
     fill(0);
-    circle(150, 150, 80);
+    // circle(150, 150, 80);
+    circle(mouseX, mouseY, 80);
 }
 
 
