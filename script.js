@@ -35,20 +35,24 @@ class Particle {
         // Position
         this.pos = createVector(random(width), random(height));
         // Velocity
+        // if you change like createVector(random(-20, 20), random(-2, 2)); you can see it moved very fast in the x-axles
         this.vel = createVector(random(-2, 2), random(-2, 2));
         // Size
         this.size = 10;
     }
 
+    // Update movement by adding velocity
     update() {
         this.pos.add(this.vel);
     }
 
+    // Draw single particle
     draw() {
         noStroke();
         fill('rgba(255,255,255,0.5');
         circle(this.pos.x, this.pos.y, this.size);
     }
+    
 }
 
 
