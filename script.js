@@ -1,11 +1,18 @@
-let p;
+// let p;
+const particles = [];
 
 function setup() {
     // console.log('setup');
     createCanvas(window.innerWidth, window.innerHeight);
     // console.log(random(100));
 
-    p = new Particle();
+    // p = new Particle();
+    const particlesLength = Math.floor(window.innerWidth / 10);
+    console.log(particlesLength);
+
+    for(let i=0; i< particlesLength; i++) {
+        particles.push(new Particle());
+    }
 }
 
 
@@ -26,8 +33,13 @@ function draw() {
     // circle(mouseX, mouseY, 80);
 
     background(55, 100, 144); // the same as the one defined in style.css
-    p.update();
-    p.draw();
+    // p.update();
+    // p.draw();
+    particles.forEach((p,index) => {
+        p.update();
+        p.draw();
+    })
+
 }
 
 class Particle {
