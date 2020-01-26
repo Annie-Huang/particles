@@ -25,6 +25,7 @@ function draw() {
     // // circle(150, 150, 80);
     // circle(mouseX, mouseY, 80);
 
+    background(55, 100, 144); // the same as the one defined in style.css
     p.update();
     p.draw();
 }
